@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Burnt Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calories Burnt Prediction</h2>
+
+        <form class="form">
+            <div class="input-group">
+                <label for="uiAge">Age</label>
+                <input class="input-field" type="number" id="uiAge" name="age" value="30" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="uiHeight">Height (cm)</label>
+                <input class="input-field" type="number" id="uiHeight" name="height" value="170" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="uiWeight">Weight (kg)</label>
+                <input class="input-field" type="number" id="uiWeight" name="weight" value="70" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="uiDuration">Duration (minutes)</label>
+                <input class="input-field" type="number" id="uiDuration" name="duration" value="30" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="uiBody_temp">Body Temperature (°C)</label>
+                <input class="input-field" type="number" id="uiBody_temp" name="body_temp" value="37" required>
+            </div>
+
+            <div class="input-group">
+                <label for="uiHeart_rate">Heart Rate (beats/min)</label>
+                <input class="input-field" type="number" id="uiHeart_rate" name="heart_rate" value="120" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+                <div class="switch-field">
+                    <input type="radio" id="radio-male" name="gender" value="male" />
+                    <label for="radio-male">Male</label>
+                    <input type="radio" id="radio-female" name="gender" value="female" checked />
+                    <label for="radio-female">Female</label>
+                </div>
+            </div>
+
+            <button class="submit-btn" onclick="onClickedEstimateCalories()" type="button">Estimate Calories</button>
+        </form>
+
+        <div id="uiEstimatedCalories" class="result">
+            <h2></h2>
+        </div>
+    </div>
+	<p id="estCalories" class = "result"></p>
+</body>
+</html>
